@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* || RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || VARIABLES */
+
+:root {
+  --FF: "Crimson Text", Georgia, "Times New Roman", serif;
+}
+
+/* || UTILITY CLASS */
+
+.tab {
+  margin-left: 3em; /* acts like a tab space */
+}
+
+/* || GENERAL STYLES */
+
+html {
+  font-family: var(--FF);
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-size: clamp(1em, 2.2vw, 2.5rem);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+.header__nav {
+  border-bottom: 1px solid;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.75);
+}
+
+nav ul {
+  list-style-type: none;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+.header__ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1em, 4vw, 4rem);
+}
+
+nav li {
+  font-size: clamp(0.8rem, 1.9vw, 1.0rem);
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  border-bottom: 2px solid;
+}
+
+.header_sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.755);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  margin-block-start: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_button {
+  display: none;
+}
+
+nav svg path {
+  fill: black; /* Changes the interior color to red */
+}
+
+.header_sidebar li {
+    border-bottom: 1px solid;
+  padding-top: 0.4em;
+  width: 100%;
+}
+
+.header_sidebar li:first-child {
+    padding-right: 1em;
+  text-align: right;
+}
+
+.header_sidebar a {
+  display: block;
+  width: 100%;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
+}
+
+/* || HERO */
+
+.hero_section {
+  display: grid;
+  grid-template-columns: auto-fit;
+  grid-template-areas:
+    "intro picture"
+    "title picture"
+    "description picture"
+    "cta picture";
+  column-gap: 1em;
+  padding-top: 1em;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.hero_image {
+  grid-area: picture;
+  justify-self: center;
+  align-self: center;
+}
+
+.hero_intro {
+  grid-area: intro;
+  justify-self: left;
+  align-self: last baseline;
+}
+
+.hero_title {
+  grid-area: title;
+  font-size: clamp(2.2rem, 1.8vw, 2.5rem);
+}
+
+.hero_description {
+  grid-area: description;
+  justify-self: left;
+  align-self: center;
+}
+
+.hero_cta {
+  grid-area: cta;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 576px) {
+  .header_sidebar {
+    width: 100%;
+  }
+
+  .header__ul {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 1em;
+  }
+
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu_button {
+    display: block;
+  }
+
+  .hero_section {
+    display: grid;
+    grid-template-columns: auto-fit;
+    grid-template-areas:
+      "picture"
+      "intro"
+      "title"
+      "description"
+      "cta";
+    column-gap: 0.5em;
+    padding-top: 1em;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
