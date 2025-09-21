@@ -12,13 +12,30 @@
 /* || VARIABLES */
 
 :root {
+  /* FONTS */
   --FF: "Crimson Text", Georgia, "Times New Roman", serif;
+
+  /* BORDERS */
+    --BORDERS: 2px solid #000;
+    --BORDER-RADIUS: 143px;
+    --BOX-SHADOW: -4px 4px 4px 0 rgba(0, 0, 0, 0.75);
+
+    /* COLOR */
+    --BUTTON-FONT-COLOR: white;
+    --BUTTON-COLOR: #343D68;
+
+    /* GENERAL STYLE */
+    --BUTTON-PADDING: 0.25em 0.8em;
 }
 
 /* || UTILITY CLASS */
 
 .tab {
   margin-left: 3em; /* acts like a tab space */
+}
+
+.smallerLetter {
+  font-size: 0.7em;
 }
 
 /* || GENERAL STYLES */
@@ -38,9 +55,20 @@ body {
   margin: 0;
 }
 
-
 main {
   padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.1em;
+}
+
+input,
+button,
+textarea {
+  font-size: clamp(0.5em, 1.3vw, 2.0rem);
 }
 
 /* || NAV SECTION */
@@ -64,7 +92,7 @@ nav ul {
 }
 
 nav li {
-  font-size: clamp(0.8rem, 1.9vw, 1.0rem);
+  font-size: clamp(0.8rem, 1.9vw, 1rem);
 }
 
 nav a {
@@ -100,13 +128,13 @@ nav svg path {
 }
 
 .header_sidebar li {
-    border-bottom: 1px solid;
+  border-bottom: 1px solid;
   padding-top: 0.4em;
   width: 100%;
 }
 
 .header_sidebar li:first-child {
-    padding-right: 1em;
+  padding-right: 1em;
   text-align: right;
 }
 
@@ -117,11 +145,11 @@ nav svg path {
   text-align: center;
 }
 
-/* || HERO */
+/* || HERO SECTION */
 
 .hero_section {
   display: grid;
-  grid-template-columns: auto-fit;
+  grid-template-columns: 1fr 0.5fr;
   grid-template-areas:
     "intro picture"
     "title picture"
@@ -160,6 +188,23 @@ nav svg path {
   grid-area: cta;
 }
 
+.cta_button {
+  display: block;
+  margin-top: 0.5rem;
+  border: var(--BORDERS);
+  border-radius: var(--BORDER-RADIUS);
+  background-color: var(--BUTTON-COLOR);
+  color: var(--BUTTON-FONT-COLOR);
+  box-shadow: var(--BOX-SHADOW);
+
+  padding: var(--BUTTON-PADDING);
+}
+
+.hero_section a {
+  text-decoration: none;
+  color: var(--BUTTON-FONT-COLOR);
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -167,6 +212,7 @@ img {
 }
 
 @media screen and (max-width: 576px) {
+  /* || NAV SECTION */
   .header_sidebar {
     width: 100%;
   }
@@ -186,9 +232,11 @@ img {
     display: block;
   }
 
+  /* || HERO SECTION */
+
   .hero_section {
     display: grid;
-    grid-template-columns: auto-fit;
+    grid-template-columns: 1fr;
     grid-template-areas:
       "picture"
       "intro"

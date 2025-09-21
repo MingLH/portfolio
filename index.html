@@ -11,7 +11,19 @@
     <header>
       <nav class="header__nav">
         <ul class="header_sidebar">
-          <li onclick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+          <li onclick="hideSidebar()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="20px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              />
+            </svg>
+          </li>
           <li><a href="/">Home</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -22,7 +34,19 @@
           <li class="hideOnMobile"><a href="#skills">Skills</a></li>
           <li class="hideOnMobile"><a href="#projects">Projects</a></li>
           <li class="hideOnMobile"><a href="#contact">Contact</a></li>
-          <li class="menu_button" onclick=showSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e3e3e3" ><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+          <li class="menu_button" onclick="showSidebar()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="20px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              />
+            </svg>
+          </li>
         </ul>
       </nav>
     </header>
@@ -34,7 +58,7 @@
           class="hero_image"
         />
         <p class="hero_intro">
-          Hi👋, I'm
+          <span class="smallerLetter">Hi👋, I'm</span>
           <br />
           <em>Lee Hao Ming</em>
         </p>
@@ -44,12 +68,13 @@
           <span class="tab">Engineer</span>
         </h1>
         <p class="hero_description">
-          Focusing on <em>front-end development</em> and a lot more!!!
+          Focusing on <em>front-end development</em>
+          <br />
+          and a lot more!!!
         </p>
         <section class="hero_cta">
-          <button>Contact Me</button>
-          <br />
-          <button>Download Resume</button>
+          <button class="cta_button"> <a href="#contact">Contact Me</a></button>
+          <button class="cta_button">Download Resume</button>
         </section>
       </section>
     </main>
