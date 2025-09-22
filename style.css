@@ -16,16 +16,16 @@
   --FF: "Crimson Text", Georgia, "Times New Roman", serif;
 
   /* BORDERS */
-    --BORDERS: 2px solid #000;
-    --BORDER-RADIUS: 143px;
-    --BOX-SHADOW: -4px 4px 4px 0 rgba(0, 0, 0, 0.75);
+  --BORDERS: 2px solid #000;
+  --BORDER-RADIUS: 143px;
+  --BOX-SHADOW: -4px 4px 4px 0 rgba(0, 0, 0, 0.75);
 
-    /* COLOR */
-    --BUTTON-FONT-COLOR: white;
-    --BUTTON-COLOR: #343D68;
+  /* COLOR */
+  --BUTTON-FONT-COLOR: white;
+  --BUTTON-COLOR: #343d68;
 
-    /* GENERAL STYLE */
-    --BUTTON-PADDING: 0.25em 0.8em;
+  /* GENERAL STYLE */
+  --BUTTON-PADDING: 0.25em 0.8em;
 }
 
 /* || UTILITY CLASS */
@@ -68,7 +68,7 @@ h3 {
 input,
 button,
 textarea {
-  font-size: clamp(0.5em, 1.3vw, 2.0rem);
+  font-size: clamp(0.5em, 1.3vw, 2rem);
 }
 
 /* || NAV SECTION */
@@ -157,14 +157,19 @@ nav svg path {
     "cta picture";
   column-gap: 1em;
   padding-top: 1em;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: 3.8rem;
+  margin-right: 3.8rem;
 }
 
 .hero_image {
   grid-area: picture;
   justify-self: center;
   align-self: center;
+
+  display: block; /* removes inline gap */
+  width: 100%; /* allow it to scale to container width */
+  height: auto; /* preserve aspect ratio */
+  max-width: 456px; /* never ask for larger than largest file */
 }
 
 .hero_intro {
@@ -205,12 +210,7 @@ nav svg path {
   color: var(--BUTTON-FONT-COLOR);
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
+/* || SMALL */
 @media screen and (max-width: 576px) {
   /* || NAV SECTION */
   .header_sidebar {
@@ -245,7 +245,43 @@ img {
       "cta";
     column-gap: 0.5em;
     padding-top: 1em;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: clamp(0.3rem, 2vw, 5rem);
+    margin-right: clamp(0.3rem, 2vw, 5rem);
+  }
+
+  .hero_image {
+    max-width: 50vw;
+  }
+
+  .hero_intro {
+    grid-area: intro;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+  }
+
+  .hero_title {
+    grid-area: title;
+    text-align: center;
+  }
+
+  .hero_description {
+    grid-area: description;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+  }
+
+  .hero_cta {
+    grid-area: cta;
+    justify-items: center;
+  }
+}
+
+/* || 2XL */
+@media screen and (min-width: 1536px) {
+  .hero_section {
+    margin-left: clamp(5rem, 12.5vw, 15rem);
+    margin-right: clamp(5rem, 12.5vw, 15rem);
   }
 }
