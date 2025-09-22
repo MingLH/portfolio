@@ -54,8 +54,16 @@
       <section id="hero_section" class="hero_section">
         <img
           src="img/profile_350x394.png"
+          srcset="
+            img/profile_250x281.png 250w,
+            img/profile_350x394.png 350w,
+            img/profile_456x514.png 456w
+          "
+          sizes="(max-width: 576px) 70vw, (min-width: 1536px) 456px, 350px"
           alt="profile_picture"
           class="hero_image"
+          width="350"
+          height="394"
         />
         <p class="hero_intro">
           <span class="smallerLetter">Hi👋, I'm</span>
@@ -73,8 +81,14 @@
           and a lot more!!!
         </p>
         <section class="hero_cta">
-          <button class="cta_button"> <a href="#contact">Contact Me</a></button>
-          <button class="cta_button">Download Resume</button>
+          <button class="cta_button"><a href="#contact">Contact Me</a></button>
+          <button class="cta_button">
+            <a
+              href="./info/Lee Hao Ming - Resume.pdf"
+              download="Lee Hao Ming - Resume"
+              >Download Resume</a
+            >
+          </button>
         </section>
       </section>
     </main>
