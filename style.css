@@ -254,6 +254,10 @@ figcaption {
   text-align: center;
 }
 
+img {
+  width: 100%;
+}
+
 
 /* || SMALL */
 @media screen and (max-width: 576px) {
