@@ -107,6 +107,7 @@
                   alt="java_pic"
                   width="100"
                   height="100"
+                  loading="lazy"
                 />
                 <figcaption>Java</figcaption>
               </figure>
@@ -116,6 +117,7 @@
                   alt="javascript_icon"
                   width="100"
                   height="100"
+                  loading="lazy"
                 />
                 <figcaption>Javascript</figcaption>
               </figure>
@@ -125,6 +127,7 @@
                   alt="python_icon"
                   width="100"
                   height="100"
+                  loading="lazy"
                 />
                 <figcaption>Python</figcaption>
               </figure>
@@ -139,6 +142,7 @@
                   alt="html_pic"
                   width="88"
                   height="100"
+                  loading="lazy"
                 />
                 <figcaption>HTML</figcaption>
               </figure>
@@ -148,6 +152,7 @@
                   alt="css_icon"
                   width="89"
                   height="100"
+                  loading="lazy"
                 />
                 <figcaption>CSS</figcaption>
               </figure>
@@ -162,6 +167,7 @@
                   alt="mysql_pic"
                   width="100"
                   height="98"
+                  loading="lazy"
                 />
                 <figcaption>MySQL</figcaption>
               </figure>
@@ -171,7 +177,7 @@
             <p>Tools</p>
             <section class="skills_icon">
               <figure>
-                <img src="/icon/git_icon.svg" alt="git_pic" />
+                <img src="/icon/git_icon.svg" alt="git_pic" loading="lazy" />
                 <figcaption>Git</figcaption>
               </figure>
               <figure>
@@ -180,6 +186,7 @@
                   alt="figma_icon"
                   width="100"
                   height="100"
+                  loading="lazy"
                 />
                 <figcaption>Figma</figcaption>
               </figure>
@@ -192,8 +199,8 @@
         <section class="projects_container">
           <section class="project project_1">
             <figure class="project_image">
-              <img src="/img/java_project_img_1.png" alt="java_project_1" />
-              <img src="/img/java_project_img_2.png" alt="java_project_2" />
+              <img src="/img/java_project_img_1.png" alt="java_project_1" loading="lazy"/>
+              <img src="/img/java_project_img_2.png" alt="java_project_2" loading="lazy"/>
             </figure>
             <section class="project_description">
               A <strong>desktop GUI application</strong> that aims to increase
@@ -202,7 +209,7 @@
               <span class="project_tech_stack underline">Tech Stack</span>
               <br />
 
-              <img src="/icon/java_icon.png" alt="java_icon" />
+              <img src="/icon/java_icon.png" alt="java_icon" loading="lazy"/>
               <br />
               <button class="projects_button">
                 <a href="">
@@ -214,7 +221,7 @@
           </section>
           <section class="project project_2">
             <figure class="project_image">
-              <img src="/img/python_project_img_3.png" alt="java_project_1" />
+              <img src="/img/python_project_img_3.png" alt="java_project_1" loading="lazy"/>
             </figure>
             <section class="project_description">
               A very simple <strong>CRUD website</strong> in managing the
@@ -222,15 +229,16 @@
               <br />
               <span class="project_tech_stack underline">Tech Stack</span>
               <br />
-              <img src="/icon/python_icon.png" alt="python_icon" />
+              <img src="/icon/python_icon.png" alt="python_icon" loading="lazy"/>
               <img
                 src="/icon/flask_icon.png"
                 alt="flask_icon"
                 class="enlarge_icon"
+                loading="lazy"
               />
-              <img src="/icon/html_icon.png" alt="html_icon" />
-              <img src="/icon/css_icon.png" alt="css_icon" />
-              <img src="/icon/mysql_icon.svg" alt="mysql_icon" />
+              <img src="/icon/html_icon.png" alt="html_icon" loading="lazy"/>
+              <img src="/icon/css_icon.png" alt="css_icon" loading="lazy"/>
+              <img src="/icon/mysql_icon.svg" alt="mysql_icon" loading="lazy"/>
               <br />
               <button class="projects_button">
                 <a href="">
@@ -249,6 +257,7 @@
             src="/img/man-standing-on-chats-1.png"
             alt="man_standing_on_chats"
             class="contact_image"
+            loading="lazy"
           />
           <form
             action="https://httpbin.org/get"
@@ -310,24 +319,24 @@
           <p>My social media links:</p>
           <nav class="social">
             <a href="https://github.com/MingLH"
-              ><img src="/icon/github-svgrepo-com 1.svg" alt="github"
+              ><img src="/icon/github-svgrepo-com 1.svg" alt="github" loading="lazy"
             /></a>
             <a
               href="https://www.linkedin.com/in/hao-ming-lee-b3a131273/"
               aria-label="Linkedin"
-              ><img src="/icon/linkedin-svgrepo-com 1.svg" alt="linkedin_icon"
+              ><img src="/icon/linkedin-svgrepo-com 1.svg" alt="linkedin_icon" loading="lazy"
             /></a>
             <a
               href="https://www.instagram.com/leehaoming1111?igsh=MWx6NzF2czMzdjM5OA=="
               aria-label="Instagram"
-              ><img src="/icon/Instagram - Negative.svg" alt="instagram" />
+              ><img src="/icon/Instagram - Negative.svg" alt="instagram" loading="lazy"/>
             </a>
             <a href="mailto:leehaoming1111@gmail.com" aria-label="Email"
-              ><img src="/icon/gmail-svgrepo-com 1.svg" alt="gmail"
+              ><img src="/icon/gmail-svgrepo-com 1.svg" alt="gmail" loading="lazy"
             /></a>
             <a
               href="https://wa.me/601116385036?text=I'm%20interested%20in%20your%20portfolio,%20I%20would%20like%20to"
-              ><img src="/icon/whatsapp-svgrepo-com 1.svg" alt="whatsapp"
+              ><img src="/icon/whatsapp-svgrepo-com 1.svg" alt="whatsapp" loading="lazy"
             /></a>
           </nav>
         </div>
@@ -366,10 +375,7 @@
       };
 
       function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
           mybutton.style.display = "block";
         } else {
           mybutton.style.display = "none";
