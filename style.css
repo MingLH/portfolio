@@ -82,6 +82,10 @@ textarea {
   font-size: clamp(0.5em, 1.3vw, 2rem);
 }
 
+button:hover {
+  background-color: hsl(233, 31%, 5%);
+}
+
 #myBtn {
   display: none;
   position: fixed;
