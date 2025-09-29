@@ -438,7 +438,7 @@ img {
 .contact_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 70%;
+  width: 80%;
   column-gap: 0.5em;
 
   margin-top: 1.5em;
@@ -520,7 +520,106 @@ img {
   color: var(--BUTTON-FONT-COLOR);
 }
 
-/* || CONTACT SECTION */
+/* container that controls available width */
+.h-captcha-wrapper {
+  width: 55%;
+  max-width: 302px; /* native widget width */
+  margin: 0 auto;
+  overflow: hidden; /* hide iframe overflow when scaled down */
+  height: 78px; /* initial native height of the widget */
+  box-sizing: content-box;
+}
+
+/* make the injected iframe scale via transform; use transform-origin left top */
+.h-captcha-wrapper .h-captcha,
+.h-captcha-wrapper iframe {
+  transform-origin: 0 0; /* scale from top-left */
+  display: block;
+  width: 302px; /* native widget width - keep that so scale math works */
+}
+
+/* || Toast styles */
+#result.toast {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  max-width: 320px;
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.12);
+  color: #fff;
+  font-size: 0.8rem;
+  z-index: 99999;
+  transform-origin: 100% 100%;
+  transform: translateY(12px) scale(0.98);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.22s cubic-bezier(0.22, 0.9, 0.36, 1),
+    opacity 0.18s ease;
+}
+
+/* visible */
+#result.toast.show {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* variants */
+#result.toast.success {
+  background: linear-gradient(180deg, #10b981, #059669);
+}
+#result.toast.error {
+  background: linear-gradient(180deg, #ef4444, #dc2626);
+}
+#result.toast.info {
+  background: linear-gradient(180deg, #3b82f6, #2563eb);
+}
+
+/* content layout */
+#result.toast .toast-content {
+  flex: 1;
+  line-height: 1.2;
+}
+#result.toast .toast-title {
+  font-weight: 300;
+  margin-bottom: 0.15rem;
+}
+#result.toast .toast-text {
+  font-weight: 100;
+  font-size: 0.6rem;
+}
+
+/* dismiss button */
+#result.toast .toast-close {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem;
+  margin-left: 0.25rem;
+  border-radius: 0.25rem;
+}
+#result.toast .toast-close:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.14);
+}
+
+/* icon */
+#result.toast .toast-icon {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  display: inline-grid;
+  place-items: center;
+  opacity: 0.98;
+}
+
+/* || FOOTER SECTION */
 
 .site-footer {
   background-color: #343d68; /* navy fill behind the wave */
@@ -675,6 +774,14 @@ img {
     width: 100%; /* allow it to scale to container width */
     height: auto; /* preserve aspect ratio */
   }
+
+  .h-captcha-wrapper {
+    max-width: 260px;
+  } /* smaller maximum if you want even tighter */
+
+  #result.toast {
+    max-width: 300px;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 880px) {
@@ -694,5 +801,9 @@ img {
   .skills_container img {
     width: 100%;
     height: 100%;
+  }
+
+  #result.toast {
+    max-width: 400px;
   }
 }
