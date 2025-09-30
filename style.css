@@ -90,12 +90,12 @@ button:hover {
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: 65px;
   z-index: 999;
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   color: white;
   cursor: pointer;
   padding: 10px;
