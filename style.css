@@ -263,12 +263,15 @@ nav svg path {
 }
 
 .skills_container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-areas:
+    "languages frontend"
+    "database tools";
   width: 100%;
   padding-top: 1em;
   justify-content: center;
-  column-gap: 3em;
+  align-items: center;
+  column-gap: 2.5rem;
   row-gap: 2.5rem;
 }
 
@@ -284,7 +287,7 @@ nav svg path {
   justify-content: center;
   padding-top: 0.8em;
   column-gap: 0.5em;
-  row-gap: 0.5em;
+  row-gap: 0.8em;
 }
 
 .skills_icon figure {
@@ -300,18 +303,22 @@ figcaption {
 }
 
 .languages_section {
+  grid-area: languages;
   text-align: center;
 }
 
 .frontend_section {
+  grid-area: frontend;
   text-align: center;
 }
 
 .database_section {
+  grid-area: database;
   text-align: center;
 }
 
 .tools_section {
+  grid-area: tools;
   text-align: center;
 }
 
@@ -756,9 +763,11 @@ img {
 
   /* || SKILLS SECTION */
   .skills_container {
-    flex-direction: column;
-    align-items: center;
-    row-gap: 2.5em;
+    grid-template-areas:
+      "languages"
+      "frontend"
+      "database "
+      "tools";
   }
 
   /* || PROJECTS SECTION */
