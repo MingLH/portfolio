@@ -715,6 +715,10 @@ img {
     font-size: clamp(1rem, 7vw, 2rem);
   }
 
+  #myBtn {
+    right: 20px;
+  }
+
   /* || NAV SECTION */
   .header_sidebar {
     width: 100%;
