@@ -74,6 +74,7 @@ h3 {
 
 h2 {
   font-size: clamp(1rem, 2.7vw, 2.5rem);
+  display: inline-block;
 }
 
 input,
@@ -254,12 +255,14 @@ nav svg path {
   padding-bottom: 1em;
   padding-bottom: 1.5em;
   justify-items: center;
+  text-align: center;
   color: white;
 }
 
 .skills_section h2 {
   padding: 0.2em 0.5em;
   border: 4px solid #fff;
+  display: inline-block;
 }
 
 .skills_container {
@@ -333,6 +336,7 @@ img {
   padding-top: 2em;
   padding-bottom: 2em;
   justify-items: center;
+  text-align: center;
 }
 
 .projects_section h2 {
@@ -344,9 +348,8 @@ img {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 70%;
   padding-top: 1em;
-  justify-content: center;
+  align-items: center;
   row-gap: 1.5rem;
 }
 
@@ -360,6 +363,7 @@ img {
   padding: 0.5em;
 
   display: grid;
+  width: 70%;
   grid-template-columns: 1fr 1fr;
   gap: 0.2rem;
   text-align: center;
@@ -384,7 +388,7 @@ img {
 }
 
 .project_description {
-  align-self: center;
+  align-self:center;
 
   font-size: clamp(0.7em, 3vw, 0.9rem);
 }
@@ -439,6 +443,7 @@ img {
   padding-top: 2em;
   padding-bottom: 8em;
   justify-items: center;
+  text-align: center;
 }
 
 .contact_section h2 {
@@ -449,20 +454,28 @@ img {
 .contact_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 80%;
+  justify-content: center;
   column-gap: 0.5em;
 
+  width: 80%;
+
   margin-top: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact_image {
-  display: block; /* removes inline gap */
-  width: 100%; /* allow it to scale to container width */
-  height: auto; /* preserve aspect ratio */
-
   margin: auto;
   /* margin-left: auto;
   margin-right: auto; */
+}
+
+.contact_image img {
+  display: block;     /* removes inline descender gap */
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
 }
 
 .contact_container input {
