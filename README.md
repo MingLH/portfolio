@@ -5,8 +5,8 @@
 
 <h2>How to Run</h2>
 <p>
-  You can view the website link at the deployment section.
+  1. You can view the website link at the deployment section.
 </p>
 <p>
-  You can also run the index.html (main file) and make sure you turn on the live server if you are using VScode
+  2. You can also run the index.html (main file) and make sure you turn on the live server if you are using VScode
 </p>
