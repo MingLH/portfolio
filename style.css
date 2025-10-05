@@ -46,7 +46,11 @@
 }
 
 .wrap {
-  word-wrap: break-word;
+  min-width: 0; /* critical for flex children so they can shrink */
+  white-space: normal; /* allow wrapping */
+  overflow-wrap: anywhere; /* modern, flexible wrapping */
+  /* optional fallback rules for older browsers */
+  word-break: normal;
 }
 
 /* || GENERAL STYLES */
@@ -398,7 +402,7 @@ img {
 }
 
 .project_description {
-  align-self:center;
+  align-self: center;
 
   font-size: clamp(0.7em, 3vw, 0.9rem);
 }
@@ -483,7 +487,7 @@ img {
 }
 
 .contact_image img {
-  display: block;     /* removes inline descender gap */
+  display: block; /* removes inline descender gap */
   width: 100%;
   height: auto;
 
@@ -689,6 +693,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  column-gap: min(4.5em, 100px);
   row-gap: 2em;
 }
 
@@ -712,6 +717,27 @@ img {
 
   align-self: stretch;
   row-gap: 0.5rem;
+}
+
+.contact_detail:last-child {
+  row-gap: 0.2em;
+}
+
+.contact_detail .phone_section {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.3em;
+}
+
+.contact_detail img {
+  max-width: 10%;
+}
+
+.contact_detail .email_section {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.3em;
 }
 
 /* || SMALL */
@@ -823,6 +849,25 @@ img {
 
   #result.toast {
     max-width: 300px;
+  }
+
+  /* || FOOTER SECTION */
+  .contact_detail:last-child {
+    row-gap: 0.5em;
+  }
+
+  .contact_detail .email_section {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.3em;
+  }
+
+  .contact_detail .email_section img {
+    margin-top: 0.15em;
+  }
+
+  .contact_detail .phone_section img {
+    margin-top: 0.15em;
   }
 }
 
