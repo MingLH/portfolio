@@ -23,9 +23,11 @@
   /* COLOR */
   --BUTTON-FONT-COLOR: white;
   --BUTTON-COLOR: #343d68;
+  --BACKGROUND-COLOR: #f7f6fb;
 
   /* GENERAL STYLE */
   --BUTTON-PADDING: 0.25em 0.8em;
+  --HEADER-HEIGHT: 1em;
 }
 
 /* || UTILITY CLASS */
@@ -63,7 +65,7 @@ body {
   min-height: 100vh;
   margin: 0;
 
-  background-color: #f7f6fb;
+  background-color: var(--BACKGROUND-COLOR);
 }
 
 h1,
@@ -92,7 +94,7 @@ button:hover {
   position: fixed;
   bottom: 20px;
   right: 65px;
-  z-index: 999;
+  z-index: 997;
   font-size: 18px;
   border: none;
   outline: none;
@@ -110,6 +112,10 @@ button:hover {
 /* || NAV SECTION */
 
 .header__nav {
+  position: fixed;
+  width: 100%;
+  z-index: 998;
+  background-color: var(--BACKGROUND-COLOR);
   border-bottom: 1px solid;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.75);
 }
@@ -145,7 +151,7 @@ nav a:hover {
   top: 0;
   right: 0;
   height: 100vh;
-  z-index: 997;
+  z-index: 998;
   background-color: rgba(255, 255, 255, 0.755);
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
@@ -192,7 +198,7 @@ nav svg path {
     "description picture"
     "cta picture";
   column-gap: 1em;
-  padding-top: 1.5em;
+  padding-top: 3em;
   padding-bottom: 2em;
   margin-left: 4.7rem;
   margin-right: 4.7rem;
@@ -251,12 +257,14 @@ nav svg path {
 
 .skills_section {
   background-color: #343d68;
-  padding-top: 1em;
+  padding-top: 1.6em;
   padding-bottom: 1em;
   padding-bottom: 1.5em;
   justify-items: center;
   text-align: center;
   color: white;
+
+  scroll-margin-top: var(--HEADER-HEIGHT);
 }
 
 .skills_section h2 {
@@ -337,6 +345,8 @@ img {
   padding-bottom: 2em;
   justify-items: center;
   text-align: center;
+
+  scroll-margin-top: var(--HEADER-HEIGHT);
 }
 
 .projects_section h2 {
@@ -444,6 +454,8 @@ img {
   padding-bottom: 8em;
   justify-items: center;
   text-align: center;
+
+  scroll-margin-top: var(--HEADER-HEIGHT);
 }
 
 .contact_section h2 {
@@ -576,7 +588,7 @@ img {
   box-shadow: 0 10px 30px rgba(2, 6, 23, 0.12);
   color: #fff;
   font-size: 0.8rem;
-  z-index: 99999;
+  z-index: 999;
   transform-origin: 100% 100%;
   transform: translateY(12px) scale(0.98);
   opacity: 0;
